@@ -1,0 +1,1 @@
+perl -n -a -F, -e '$sum += $F[2]; END {print $sum}' process_csv_file.csv

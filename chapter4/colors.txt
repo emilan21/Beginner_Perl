@@ -1,0 +1,6 @@
+Green
+Red
+Blue
+Yellow
+Brown
+White

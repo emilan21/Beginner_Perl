@@ -1,0 +1,8 @@
+my $var;
+if (CONd) {
+	$avar =A;
+} else {
+	$var = B;	
+}
+
+my $var = COND ? A : B;

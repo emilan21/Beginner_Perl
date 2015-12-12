@@ -1,0 +1,7 @@
+Report about file data.txt
+--------------------------
+minumum: -17
+maximum: 98
+total: 126
+count: 6
+average: 21
