@@ -16,6 +16,7 @@ foreach my $str (@input) {
 	@key_pair_split = split /&/, $str;
 	foreach my $str2 (@key_pair_split) {
 		@key_pair_split_2 = split /=/, $str2;
+		$hash{$key_pair_split_2[0]} = $key_pair_split_2[1];
 
 	}
 }
