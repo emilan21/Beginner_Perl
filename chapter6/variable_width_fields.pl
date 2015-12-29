@@ -16,4 +16,16 @@ open(my $data, '<', $file) or die "Could not open '$file'\n";
 # of digits. The number of digits depend on the leading character.
 #
 # The script will split up the data to commands and count how many times each command type was given.
+while (my $line = <$data>) {
+	chomp $line;
+	my $command = substr $line, 16, -16; # Get Command codes
+	foreach my $char (split //, $command) {
+		if ($char =~ /^[a-zA-Z]+$/) {
+			$command_count{$char}++;
+		}	
+	}
+}
 
+foreach my $count (sort keys %command_count) {
+	print "Command: $count\tNumber of times command used:  $command_count{$count}\n";
+}
