@@ -1,0 +1,2 @@
+flintstones: hustband=fred pal=barney wife=wilma pet=dino
+flintstones2: hustband=h1 pet=h2
