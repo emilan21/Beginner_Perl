@@ -10,13 +10,17 @@ my $filename = shift or die "Usage: $0 filename\n";
 open(my $fh, "<", $filename) or die "Could not open '$filename'\n";
 
 while (my $line = <$fh>) {
-	if ($line =~ /my/) {
-		$varibles[$i] = split /\s*my \$\s*/, $line;
+	chomp $line;
+	if ($line =~ /my\s\$.+/) {
+		$varibles[$i] = $line;
+	}else{
+		next;
 	}	
 
 	$i++;
 }
 
-foreach my $y (0..@varibles) {
-	print $varibles[$y] . "\n";
+foreach my $loop (@varibles) {
+	print $loop;
+	print "\n";
 }
