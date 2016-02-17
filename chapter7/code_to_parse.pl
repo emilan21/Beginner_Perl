@@ -6,6 +6,7 @@ my $filename = shift or die "Usage: $0 filename\n";
 open(my $fh, "<", $filename) or die "Could not open '$filename'\n";
 
 my @snmps = <$fh>;
+my %hahs;
 chomp @snmps;
 
 print join "\n", @snmps;
