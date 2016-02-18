@@ -13,7 +13,7 @@ while (my $line = <$fh>) {
 	my @words = split / /, $line;
 	foreach my $word (@words) {
 		$count{$word}++;
-	}
+	}	
 }
 
 foreach my $word (keys %count) {
